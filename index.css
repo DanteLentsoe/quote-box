@@ -9,15 +9,15 @@
 Header Design
 ###################*/
 nav{
-  padding: 20px;
+  padding: 30px;
+  background-color: #222;
   width: 100%;
+  height:100%;
+  bottom: 0;
+  display:block;
+  color: #fff;
+  text-align: center;
   position: relative;
-  top: 0;
-  z-index:1;
-  background: rgb(131, 123, 123);
-  height: 3rem;
-  display: grid;
-  align-items: center;
   box-shadow: 0 9px 19px rgba(0, 0, 0, 0.2);
 
 }
@@ -35,30 +35,45 @@ Box Quote Machine
   align-items: center;
   justify-content: center; /* in order fot contents to be centred display type has to be declared*/
   display: grid;
+  width: 100%;
   height: 100vh; /* this allows the contents of the page to take 100% of the space thus leaving the footer to have its own section*/
 }
 
 section.quote-box-style
 {
+  
   align-content: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
   position: relative;
+  color:white;
   border: 3px solid #223;
   box-shadow: black;
   width: 500px;
-  height: 200px;
+  height: 230px;
   padding: 50px 60px;
   background-color: #223;
   font-family: 'Times New Roman', serif;
   align-items: center;
   justify-content: center; /* in order fot contents to be centred display type has to be declared*/
-  display: flex;
   opacity: 0.7;
+  display: grid;
   position: relative;
-  z-index:1;
-  display: table;
+  z-index:2;
+
+   /*list-style: inline;*/
+
 
 }
+
+
+
+@media screen and (min-width: 450px){
+    
+  .quote-box-style {width: 450px;
+  height: 320px;}
+ }
+
+
 
 #text
 {
@@ -72,23 +87,23 @@ section.quote-box-style
 {
   height:auto;
     clear:both;
-    padding-top:20px;
-    font-size:1em; 
+    font-family:'Times New Roman', serif;
+    font-size: 20px;
+    top:0;
     text-align:right;
 }
 
-.buttons
-{
-  margin:auto;
-    display:block;
-}
+
+
+/*************************
+Button Styling Start
+**************************/
 
 .button
 {
   /* code the button styles*/
   font-family: 'Times New Roman', Times, serif;
   text-transform: uppercase;
- /* background: transparent; /* Allow it to absorb background color*/
   color: rgb(29, 28, 28);
   padding: 0.385rem 0.85rem;
   letter-spacing: 0.25rem;
@@ -100,14 +115,52 @@ section.quote-box-style
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   opacity: 0.9;
-  margin-top: 15em;
+  margin-top: 2em;
   margin-left: 10.5em;
+  margin-right: 10.5em;
+  z-index:2;
 }
 
 .button:hover{
   color: #fff;  /* leaves white outter colour following being pressed */
   background: rgb(29, 28, 28);
 }
+
+.button_twitter
+{
+  font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    background: silver;
+    color: rgb(29, 28, 28);
+    padding: 0.385rem 0.85rem;
+    text-decoration: none;
+    letter-spacing: 0.25rem;
+    
+    font-weight: 700;
+    transition: all 0.3s linear;
+    text-align: center;
+    font-size: 0.875rem;
+    border: 2px solid rgb(29, 28, 28);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-top: 3em;
+    margin-left: 10.5em;
+    margin-right: 10.5em;
+   
+}
+
+.button_twitter:hover
+{
+  color: #fff; 
+  background: rgb(29, 28, 28);
+
+}
+
+
+/*************************
+Button Styling End
+**************************/
+
 
 /*#####################
 Box Quote Machine End
@@ -164,10 +217,11 @@ Background Design End
   padding: 30px;
   background-color: #222;
   width: 100%;
+  height:100%;
   bottom: 0;
   display:block;
   color: #fff;
   text-align: center;
   position: relative;
-  
+
 }
